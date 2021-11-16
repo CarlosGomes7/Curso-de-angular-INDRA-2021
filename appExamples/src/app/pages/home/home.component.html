@@ -1,0 +1,48 @@
+<h1>Variable: {{isTrue}}</h1>
+
+<h1 [ngClass]="{ isTrue: isTrue }">hola mundo</h1>
+
+<button (click)="cambiarValores()">Aceptar</button>
+
+<p [ngStyle]="{ background: backgroundDinamico }">Ejemplo de style</p>
+
+<h1>{{ fullName }}</h1>
+
+<label for="">Nombre:</label>
+<input type="text" [(ngModel)]="fullName" />
+<br>
+
+<p *ngIf="isTrue">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptas in
+  tempora maxime quam. Quisquam necessitatibus minus quo nisi impedit?
+  Asperiores quia animi reiciendis illo dolorum modi, repellendus tenetur nulla?
+</p>
+
+
+<ul>
+    <li *ngFor="let item of people">
+        nombre: {{item.nombre}},
+        apellido: {{item.apellido}}
+    </li>
+</ul>
+
+<span>switch_expression : {{switch_expression}}</span><br>
+<span>expression_1 : {{match_expression_1}}</span><br>
+<span>expression_2 : {{match_expression_2}}</span><br>
+
+
+<container-element [ngSwitch]="switch_expression">
+    <!-- the same view can be shown in more than one case -->
+    <span *ngSwitchCase="match_expression_1">
+        Expresion 1
+    </span>
+    <span *ngSwitchCase="match_expression_2">
+        Expresion 2
+    </span>    
+
+    <!--default case when there are no matches -->
+    <span *ngSwitchDefault>
+        default
+    </span>
+
+  </container-element>
