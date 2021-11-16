@@ -1,0 +1,22 @@
+<h1>Vista Padre</h1>
+<table>
+    <tr>
+      <th>Nombre</th>
+      <th>Ciudad</th>
+      <th>Avatar</th>
+    </tr>
+    <tr *ngFor="let item of people" (click)="getItem(item)">
+      <td>{{item.nombre}}</td>
+      <td>{{item.ciudad}}</td>
+      <td>
+          <img [src]="item.avatar" alt="">
+      </td>
+    </tr>
+</table>
+
+<div>
+    <h1>Vista Hijo</h1>
+    <app-detalle 
+    [people] = "selectedPeople" 
+    (newItemEvent)="mostrarNombreSeleccionado($event)"></app-detalle>
+</div>
