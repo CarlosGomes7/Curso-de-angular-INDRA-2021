@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'appExamples';
+  flag = true;
+
+  delete(){
+    this.flag = !this.flag;
+  }
 }
