@@ -1,0 +1,21 @@
+<ul>
+  <li>
+      <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
+  </li>
+  <li>
+      <a [routerLink]="['/lista']" routerLinkActive="active">Lista</a>
+  </li>
+  <li>
+      <a [routerLink]="['/detalle']" routerLinkActive="active">Detalle </a>
+  </li>
+  <li>
+      <a [routerLink]="['/error']" routerLinkActive="active">Error </a>
+  </li>
+</ul>
+
+<label for="">Nivel de Usuario:</label>
+<input type="text" [(ngModel)]="userNivel">
+
+<button (click)="nivelUser()">
+  aceptar
+</button>

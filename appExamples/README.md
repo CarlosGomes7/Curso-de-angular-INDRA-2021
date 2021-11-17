@@ -25,3 +25,22 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+para la instalacion del bootstrap 
+1) ejecutar comandos npm 
+npm install bootstrap
+npm install jquery
+ 2) vamos al archivo angular.json 
+ para el Style insertamos la primera ruta 
+ "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css", // este
+              "src/styles.css"
+            ],
+
+para el script se insertan las 2 rutas
+"scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
