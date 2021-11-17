@@ -5,4 +5,4 @@ export interface People {
     email: string,
     avatar: string,
     sueldo: string
-   }
+}

@@ -16,13 +16,11 @@ export class DetalleComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    // this.nombreDePeople = this.people.nombre;
      console.log(this.people);
   }
 
   // pasar evento al padre por un output
   enviarNombreAlComponentePadre(){
     this.newItemEvent.emit(this.people);
-
   }
 }
