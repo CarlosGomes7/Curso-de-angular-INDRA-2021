@@ -9,6 +9,7 @@ import { DetalleComponent } from './pages/detalle/detalle.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './pages/header/header.component';
+import { LoginComponent } from './pages/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { HeaderComponent } from './pages/header/header.component';
     ListaComponent,
     DetalleComponent,
     ErrorComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

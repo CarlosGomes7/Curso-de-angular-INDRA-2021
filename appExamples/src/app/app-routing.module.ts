@@ -5,11 +5,16 @@ import { DetalleComponent } from './pages/detalle/detalle.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListaComponent } from './pages/lista/lista.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'lista',
