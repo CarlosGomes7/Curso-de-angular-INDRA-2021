@@ -1,0 +1,28 @@
+<h2>Listado</h2>
+<button (click)="getPeopleHttp()" >Cargar Datos</button>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let item of usuario" class="card col-4" >
+            <img [src]="item.img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.nombre}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button class="btn btn-primary" (click)="agregarUsuario(item)" >
+                  enviar 
+              </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<ul>
+    <li *ngFor="let item of people">
+        <span>{{item.nombre}}</span>
+    </li>
+</ul>
+
