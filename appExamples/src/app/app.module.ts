@@ -14,6 +14,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { SidebarComponent } from './_layout/sidebar/sidebar.component';
+import { EjemploLayoutComponent } from './_layout/ejemplo-layout/ejemplo-layout.component';
+import { ListaComponent } from './lista/lista.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,
     LoginComponent,
     ProfileComponent,
-    RegisterComponent
+    RegisterComponent,
+    SidebarComponent,
+    EjemploLayoutComponent,
+    ListaComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,

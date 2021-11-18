@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { AppLayoutComponent } from './_layout/app-layout/app-layout.component';
+import { EjemploLayoutComponent } from './_layout/ejemplo-layout/ejemplo-layout.component';
 import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component';
 
 const routes: Routes = [
@@ -30,7 +31,14 @@ const routes: Routes = [
       { path: 'profile', component: ProfileComponent }
     ]
 },
-
+{
+  path: 'ejemplo',
+  component: EjemploLayoutComponent,
+  children: [
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'profile', component: ProfileComponent }
+  ]
+},
 //no layout routes
 { path: 'login', component: LoginComponent},
 { path: 'register', component: RegisterComponent },
