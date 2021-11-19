@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4 mt-3" *ngFor="let item of listadoMascotas">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://picsum.photos/seed/picsum/200/300" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{item.raza}}</h5>
+              <p class="card-text">
+                  El peso de la mascota es de {{item.peso}} Kg, tiene una edad de {{item.edad}} Meses y es de color {{item.color}}
+              </p>
+              <button class="btn btn-primary" (click)="irDetalles(item)">
+                  ir a Detalle
+              </button>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
