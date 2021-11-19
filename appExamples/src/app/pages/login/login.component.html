@@ -1,0 +1,51 @@
+<div class="container mt-5 border border-dark py-3">
+  <div class="row mx-auto">
+    <div class="col-10">
+
+      <span>Formulario valido: {{!formLogin.valid}}</span>
+      <br>
+      <span>Variable para desabilitar el boton {{flagDisabled}}</span>
+      <br>
+      <strong>resultado disabled: {{!formLogin.valid || flagDisabled}}</strong>
+
+      <form [formGroup]="formLogin">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            formControlName="email"
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />   
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            formControlName="password"
+            [type]="flagTypePassword"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+          />
+          <div *ngIf="formLogin.get('password')?.dirty && formLogin.get('password')?.invalid" class="alert alert-danger" role="alert">
+            Valor incorrecto
+          </div>
+          <button class="btn btn-outline-success mt-2" (click)="cambiarValor()">
+            {{showPassword}}
+          </button>
+          
+        </div> 
+        
+        <button 
+          [disabled]="!formLogin.valid || flagDisabled" 
+          type="submit" 
+          class="btn btn-primary mt-4"
+          (click)="enviarValoresDelFormulario()">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div> 
+</div>
